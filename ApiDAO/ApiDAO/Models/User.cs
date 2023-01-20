@@ -1,5 +1,8 @@
 ﻿namespace ApiDAO.Models
 {
+    /// <summary>
+    /// Class model User.
+    /// </summary>
     public class User
     {
         public int UserId { get; set; }

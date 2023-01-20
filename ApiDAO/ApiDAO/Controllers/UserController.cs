@@ -5,15 +5,26 @@ using ApiDAO.DAO;
 
 namespace ApiDAO.Controllers
 {
+    /// <summary>
+    /// UserController.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IDAOUser _daoUser;
+        /// <summary>
+        /// Constructor UserController.
+        /// </summary>
+        /// <param name="daoUser">Injection dependency IDAOUser.</param>
         public UserController(IDAOUser daoUser)
         { 
             _daoUser = daoUser;
         }
+        /// <summary>
+        /// Get all users.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetUsers")]
         public List<User> GetUsers()
         { 
